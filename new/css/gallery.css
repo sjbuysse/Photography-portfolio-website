@@ -36,6 +36,7 @@ IMAGE GALLERY LAYOUT
 /*  **********************
 IMAGE TITLE & LOADING ANIMATION
 *********************** */
+/*The black transparant overlay that shows when we hover over the list item*/
 .image_title {
 	width: 100%; height: 100%;
 	background: rgba(0, 0, 0, 0.5);
@@ -47,6 +48,7 @@ IMAGE TITLE & LOADING ANIMATION
 	transition: 0.5s;
 }
 
+/*The title that will be placed inside the .image_title overlay*/ 
 .title{
 	margin: 0;
 	padding: 0;
