@@ -79,7 +79,6 @@ header{
 	width: 300px;
 	background: #2f2f2f;
 	overflow-x: hidden;
-	overflow-y: scroll;
 	padding: 20px;
 	-webkit-overflow-scrolling: touch;
 }
@@ -91,4 +90,28 @@ header{
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 	padding: 20px;
+}
+
+/*****************************
+ checked styles (menu open state)
+ *****************************/
+
+ /*The page content will get a white transparent overlay, to focus on the drawer*/
+#drawer-toggle:checked ~ #drawer-toggle-label { 
+	height: 100%;
+	width: calc(100% - 300px);
+	background: rgba(255, 255, 255, .8);
+}
+
+#drawer-toggle:checked ~ #drawer-toggle-label,
+#drawer-toggle:checked ~ header {
+  left: 300px;
+}
+
+#drawer-toggle:checked ~ #drawer {
+  left: 0px;
+}
+
+#drawer-toggle:checked ~ .page-content {
+  margin-left: 300px;
 }

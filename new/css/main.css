@@ -6,7 +6,7 @@ GENERAL
 }
 
 html, body{
-	min-height: 100%;
+	height: 100%;
 }
 
 
@@ -95,7 +95,7 @@ footer{
 }
 /*Sticky footer */
 .page-wrap {
-  min-height: 100%;
+  height: 100%;
   /* equal to footer height */
   margin-bottom: -100px; 
 }
