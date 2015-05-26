@@ -60,7 +60,7 @@ We're using the :before pseudo-element to create the "hamburger" menu icon. The 
 	top: 20px;
 	box-shadow: 0 7px 0 #8d8d8d, 0 14px 0 #8d8d8d;
 }
-/*
+
 header{ 
 	position: absolute;
 	top: 0;
@@ -68,7 +68,7 @@ header{
 	width: 100%;
 	background-color: rgba(0,0,0,0.7);
 	height: 60px;
-}*/
+}
 
 /*Here we go with the actual panes. We've got two; the content pane and the drawer pane. These styles apply to the "closed" menu state, so if you notice, the position of the #drawer is -300px (the negative equivalent of its width) to remove it from view.)*/	
 #drawer { 
@@ -88,9 +88,7 @@ header{
 .page-content { 
 	margin-left: 0px;
 	width: 100%;
-	height: calc(100% - 50px);
 	overflow-x: hidden;
-	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	padding: 20px;
 }
