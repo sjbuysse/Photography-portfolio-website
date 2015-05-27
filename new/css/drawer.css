@@ -15,7 +15,6 @@
 
 html,
 body { 
-	overflow: hidden;
 }
 
 /* gets the actual input out of the way; 
@@ -36,6 +35,7 @@ we're using the checkbox hack, we're removing the actual input from the flow by 
 	-ms-user-select: none;
 	user-select: none;
 	left: 0px;
+	top: 0px;
 	height: 60px;
 	width: 60px;
 	display: block;
@@ -83,8 +83,11 @@ header{
 /*we make an extra container for the whole content pane, that is 100% width.
 This makes sure that the whole pane moves to the right and a bit off the screen when the menu opens, rather than resizing the whole content for a smaller area.*/
 .page-content { 
+	margin-top: 60px;
+	height: calc(100% - 60px);
 	width: 100%;
 	overflow-x: hidden;
+	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
 
