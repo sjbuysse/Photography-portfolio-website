@@ -12,17 +12,21 @@
   </head>
   <body>
   	<div class="page-wrap">
-		<header class="group">  <!--  Footer and Header will be displayed on every page!  -->
-			<nav>  <!-- Just a semantic that navigation will come here, doesn't do anything -->
-				<ul>
-					<li><a href="about.html">About</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="index.html">home</a></li>
-					<li><a href="camera.html">Camera</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</header> 
+    <header>  <!--  Footer and Header will be displayed on every page!  -->
+    </header> 
+		<input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
+		<label for="drawer-toggle" id="drawer-toggle-label"></label>
+
+		<nav id="drawer">  <!-- Just a semantic that navigation will come here, doesn't do anything -->
+			<ul>
+				<li><a href="index.html">home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="camera.html">Camera</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav> 
+		<!-- <div  class="page-content">-->
 		<div  class="portfolio content group">
 			<div class = "project-title-wrapper">
 				<div class="project-wrapper">
@@ -55,7 +59,8 @@
 				<div class="project-title">A  walk in Ghent</div>
 			</div>
 		</div>
-	</div>
+	<!-- </div> end page content-->
+	</div> <!-- end page wrap -->
 	<footer>
 	<p>&copy; 2015 Marie Buysse.</p> 
 	</footer>
