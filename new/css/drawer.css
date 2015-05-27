@@ -1,4 +1,4 @@
-* { 
+#drawer-toggle-label, #drawer, header, .page-content{ 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -68,13 +68,13 @@ header{
 	height: 60px;
 }
 
-/*Here we go with the actual panes. We've got two; the content pane and the drawer pane. These styles apply to the "closed" menu state, so if you notice, the position of the #drawer is -300px (the negative equivalent of its width) to remove it from view.)*/	
+/*Here we go with the actual panes. We've got two; the content pane and the drawer pane. These styles apply to the "closed" menu state, so if you notice, the position of the #drawer is -250px (the negative equivalent of its width) to remove it from view.)*/	
 #drawer { 
 	position: fixed;
 	top: 0;
-	left: -300px;
+	left: -250px;
 	height: 100%;
-	width: 300px;
+	width: 250px;
 	background: #2f2f2f;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
@@ -96,23 +96,23 @@ This makes sure that the whole pane moves to the right and a bit off the screen 
  The other advantage is that if you press the white overlay, you actually uncheck the toggle and the menu closes!*/
 #drawer-toggle:checked ~ #drawer-toggle-label { 
 	height: 100%;
-	width: calc(100% - 300px);
+	width: calc(100% - 250px);
 	background: rgba(255, 255, 255, .8);
 }
 
 #drawer-toggle:checked ~ #drawer-toggle-label,
 #drawer-toggle:checked ~ header {
-	-ms-transform: translate(300px); /* IE 9 */
-	-webkit-transform: translate(300px); /* Safari */
-	 transform: translate(300px);
+	-ms-transform: translate(250px); /* IE 9 */
+	-webkit-transform: translate(250px); /* Safari */
+	 transform: translate(250px);
 }
 
 #drawer-toggle:checked ~ #drawer {
-	-ms-transform: translate(300px); /* IE 9 */
-	-webkit-transform: translate(300px); /* Safari */
-	transform: translate(300px);
+	-ms-transform: translate(250px); /* IE 9 */
+	-webkit-transform: translate(250px); /* Safari */
+	transform: translate(250px);
 }
 
 #drawer-toggle:checked ~ .page-content {
-  margin-left: 300px;
+  margin-left: 250px;
 }
