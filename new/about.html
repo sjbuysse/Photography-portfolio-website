@@ -12,8 +12,22 @@
   </head>
   <body>  
 	<div class="page-wrap">
-		<header class="group">  <!--  Footer and Header will be displayed on every page!  -->
-			<nav>  <!-- Just a semantic that navigation will come here, doesn't do anything -->
+	    <header>  <!--  Footer and Header will be displayed on every page!  -->
+       </header> 
+   		<input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
+   		<label for="drawer-toggle" id="drawer-toggle-label"></label>
+   
+   		<nav id="drawer">  <!-- Just a semantic that navigation will come here, doesn't do anything -->
+   			<ul>
+   				<li><a href="index.html">home</a></li>
+   				<li><a href="about.html">About</a></li>
+   				<li><a href="portfolio.html">Portfolio</a></li>
+   				<li><a href="camera.html">Camera</a></li>
+   				<li><a href="contact.html">Contact</a></li>
+   			</ul>
+   		</nav> 
+		<!--<header class="group"> 
+			<nav>  
 				<ul>
 					<li><a href="about.html">About</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
@@ -22,8 +36,8 @@
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
-		</header> 
-		<div  class="about content">
+		</header> -->
+		<div  class="page-content about content">
 			<img src="img/marie.jpg" alt="Profile picture of Marie Buysse" id="profile-picture"> 	
 			<h3>About</h3>
 			<p>

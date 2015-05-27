@@ -34,13 +34,33 @@ a {
 	min-width: 320px;
 	max-width: 900px;
 	margin: 0 auto;
-	padding: 30px;
+	padding: 100px;
 }
 
 
 /*  **********************
 NAVIGATION
 *********************** */
+/*This is for the mobile navigation*/
+nav ul{ 
+	padding: 0;
+	margin: 2em 0 0;
+	width: 100%;	
+}
+
+nav li{ 
+	width: 100%;
+	height: 2.5em;
+	line-height: 2.5em;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+nav li a { 
+	display: block;	
+}
+/*This is for desktop navigation
 nav ul{
 	max-width: 1000px;
 	margin: 0 auto;
@@ -59,13 +79,12 @@ nav li{
 	padding: 0;
 	height: 60px; 
 	line-height: 60px;
-	/* border-bottom: solid 1px #bebebe; */
 	text-align: center;
 }
 
 nav li a{
 	display: block;
-}
+}*/
 
 
 /*  **********************

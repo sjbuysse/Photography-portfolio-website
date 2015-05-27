@@ -13,10 +13,8 @@
 	-webkit-text-size-adjust: none;
 }
 
-/* Makes sure that everything is 100% height */
 html,
 body { 
-	height: 100%;
 	overflow: hidden;
 }
 
@@ -79,24 +77,21 @@ header{
 	width: 300px;
 	background: #2f2f2f;
 	overflow-x: hidden;
-	padding: 20px;
 	-webkit-overflow-scrolling: touch;
 }
 /* actual page content pane */
 
 .page-content { 
-	margin-left: 0px;
-	width: 100%;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
-	padding: 20px;
 }
 
 /*****************************
  checked styles (menu open state)
  *****************************/
 
- /*The page content will get a white transparent overlay, to focus on the drawer*/
+ /*The page content will get a white transparent overlay, to focus on the drawer.
+ The other advantage is that if you press the white overlay, you actually uncheck the toggle and the menu closes!*/
 #drawer-toggle:checked ~ #drawer-toggle-label { 
 	height: 100%;
 	width: calc(100% - 300px);
@@ -105,11 +100,15 @@ header{
 
 #drawer-toggle:checked ~ #drawer-toggle-label,
 #drawer-toggle:checked ~ header {
-  left: 300px;
+	-ms-transform: translate(300px); /* IE 9 */
+	-webkit-transform: translate(300px); /* Safari */
+	 transform: translate(300px);
 }
 
 #drawer-toggle:checked ~ #drawer {
-  left: 0px;
+	-ms-transform: translate(300px); /* IE 9 */
+	-webkit-transform: translate(300px); /* Safari */
+	transform: translate(300px);
 }
 
 #drawer-toggle:checked ~ .page-content {
