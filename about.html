@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- Lets the browser know how to interpret the document -->
+<html>
+  <head>
+    <meta charset="utf-8">  <!-- Tells the browser how our page is formatted and what types of characters are used -->
+	                                   <!-- charset="" is an attribute -->
+    <title>Marie Buysse | Apfelstrudel</title> <!-- Will show in the browser tabs & search result on google -->
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/main.css"> 
+   <link rel="stylesheet" href="css/grid.css">
+   <link rel="stylesheet" media="screen and (max-width: 799px)" href="css/drawer.css">
+   <link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
+  </head>
+  <body>  
+	<div class="page-wrap">
+	    <header>  <!--  Footer and Header will be displayed on every page!  -->
+       </header> 
+   		<input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
+   		<label for="drawer-toggle" id="drawer-toggle-label"></label>
+   
+   		<nav id="drawer">  <!-- Just a semantic that navigation will come here, doesn't do anything -->
+   			<ul>
+   				<li><a href="index.html">home</a></li>
+   				<li><a href="about.html">About</a></li>
+   				<li><a href="portfolio.html">Portfolio</a></li>
+   				<li><a href="camera.html">Camera</a></li>
+   				<li><a href="contact.html">Contact</a></li>
+   			</ul>
+   		</nav> 
+		<!-- old navbar
+		<header class="group">--> 
+			<nav id="wide">  
+				<ul>
+					<li><a href="about.html">About</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="index.html">home</a></li>
+					<li><a href="camera.html">Camera</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+<!--		</header> -->
+		<div class="page-content">
+		<div  class="about content">
+			<img src="img/marie.jpg" alt="Profile picture of Marie Buysse" id="profile-picture"> 	
+			<h3>About</h3>
+			<p>
+			Hi, my name is Marie Buysse. Welcome to my portfolio website. Around the turn of the year 2014 to 2015, I finally had saved up enough money for my own decent camera.
+			Perfect timing, as I was to embark on many travels during 2015 and would get amazing opportunities to practice the art of photography. Pictures accumulated, and soon I needed to
+			organize all of them. So why not do it here, where everyone can enjoy them. Have a look around, and give a shout if you like them! Hugs, Marie.
+			</p>
+		</div>
+	</div>
+	</div> <!--end page-content-->
+	<footer>
+	<p>&copy; 2015 Marie Buysse.</p> 
+	</footer>
+  </body>
+</html>

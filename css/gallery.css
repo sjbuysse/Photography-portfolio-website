@@ -1,0 +1,161 @@
+.image-gallery img, #overlay img{
+    border: 5px solid rgba(0,0,0,0.7);
+	display: block;
+}
+
+.image-gallery a{
+	display: block;
+	width: 100%;
+	height: 100%;	
+}
+
+/*  **********************
+IMAGE GALLERY LAYOUT
+*********************** */
+.image-gallery ul{
+	width: 100%;
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.image-gallery li:nth-child(odd){
+   clear: left; 
+}
+
+.image-gallery li{
+	float: left;
+	position: relative;
+	width: 45%;
+	margin: 2.5%;
+	/* cursor */: pointer;
+}
+
+
+/*  **********************
+IMAGE TITLE & LOADING ANIMATION
+*********************** */
+/*The black transparant overlay that shows when we hover over the list item*/
+.image_title {
+	width: 100%; height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*Hover effect - default state*/
+	opacity: 0;
+	transition: 0.5s;
+}
+
+/*The title that will be placed inside the .image_title overlay*/ 
+.title{
+	margin: 0;
+	padding: 0;
+	color: white;
+	text-transform: uppercase; 
+	font-size: 1em;
+	/*center vertically and horizontally*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	/*Hover effect - default state*/
+	transform: translate(-50%,-50%) scale(0.2);
+	transition: all 0.25s;
+}
+
+
+/*Zoom icon over each title using iconfont and pseudo elements*/
+.title::before {
+	/*Content will contain the ascii value of the iconfont character. It cannot take special characters directly.*/
+	content: '\1F50D';
+	color: #fff;
+	font-size: 2em;
+	opacity: 0.5;
+	display: block;
+	line-height: 70%;
+}
+
+/*Hover states*/
+li:hover .image_title {
+	opacity: 1;
+}
+
+li:hover .title {
+	transform: translate(-50%,-50%) scale(1);
+}
+
+/*A separate class for loading GIF, for easy Jquery handling*/
+.lb_canvas.loading {
+	background: white url("http://thecodeplayer.com/uploads/media/loading.gif") center center no-repeat;
+}
+
+/*  **********************
+LIGHTBOX OVERLAY
+*********************** */
+.lb_backdrop {
+  background-color: rgba(0,0,0,0.7);  
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+}
+
+.lb_controls {
+	width: 20%;
+	min-width: 200px; 
+	background: rgba(0, 0, 0, 0.75);
+	position: fixed;
+	height: 40px;
+	line-height: 40px;
+	bottom: 10px;
+	color: white;
+	/*To horizontally center it*/
+	left: 0; right: 0; margin: 0 auto; 
+}
+
+
+.lb_title{
+	float: left;
+	text-align: center;
+	/*Left and right margin just a bit bigger than the floating left and right icons*/
+	width: calc(100% - 80px);
+	margin: 0 auto;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.lb_controls .inactive{
+	opacity: 0.25;	
+}
+
+.lb_previous{
+	float: left;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lb_next{
+	float: right;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.lb_next, .lb_previous{
+	width: 40px;
+	cursor: pointer;
+}
+
+.lb_canvas{
+	background: white;
+	width: 50px; height: 50px;
+	box-shadow: 0 0 20px 5px black;
+	position: fixed;
+	left:0; top: 0; /*Will be centered in jQuery*/
+	transform: translate(-50%,-50%);
+	padding: 10px;
+}
+
+.chevron-left, .chevron-right{
+	fill:white;
+}
