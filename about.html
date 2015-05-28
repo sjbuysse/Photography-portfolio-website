@@ -7,21 +7,38 @@
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/main.css"> 
    <link rel="stylesheet" href="css/grid.css">
+   <link rel="stylesheet" media="screen and (max-width: 799px)" href="css/drawer.css">
    <link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
   </head>
   <body>  
 	<div class="page-wrap">
-		<header class="group">  <!--  Footer and Header will be displayed on every page!  -->
-			<nav>  <!-- Just a semantic that navigation will come here, doesn't do anything -->
+	    <header>  <!--  Footer and Header will be displayed on every page!  -->
+       </header> 
+   		<input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
+   		<label for="drawer-toggle" id="drawer-toggle-label"></label>
+   
+   		<nav id="drawer">  <!-- Just a semantic that navigation will come here, doesn't do anything -->
+   			<ul>
+   				<li><a href="index.html">home</a></li>
+   				<li><a href="about.html">About</a></li>
+   				<li><a href="portfolio.html">Portfolio</a></li>
+   				<li><a href="camera.html">Camera</a></li>
+   				<li><a href="contact.html">Contact</a></li>
+   			</ul>
+   		</nav> 
+		<!-- old navbar
+		<header class="group">--> 
+			<nav id="wide">  
 				<ul>
 					<li><a href="about.html">About</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="index.html">home</a></li>
+					<li><a href="index.html"><img src="icons/camera.svg"></a></li>
 					<li><a href="camera.html">Camera</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
-		</header> 
+<!--		</header> -->
+		<div class="page-content">
 		<div  class="about content">
 			<img src="img/marie.jpg" alt="Profile picture of Marie Buysse" id="profile-picture"> 	
 			<h3>About</h3>
@@ -32,6 +49,7 @@
 			</p>
 		</div>
 	</div>
+	</div> <!--end page-content-->
 	<footer>
 	<p>&copy; 2015 Marie Buysse.</p> 
 	</footer>
