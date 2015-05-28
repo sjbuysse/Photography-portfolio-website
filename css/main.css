@@ -57,9 +57,11 @@ NAVIGATION
 	font-size: 1.2em;
 }
 
-#drawer li a { 
+/*This is valid for both drawer and wide navigation*/
+nav li a { 
 	display: block;	
 }
+	
 /*This is for desktop/widescreen navigation*/
 @media screen and (min-width: 800px){
 	#drawer, #drawer-toggle, #drawer-toggle-label{ 
@@ -85,6 +87,14 @@ NAVIGATION
 		height: 60px; 
 		line-height: 60px;
 		text-align: center;
+		position: relative;
+	}
+	#wide img{ 
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 3em;	
 	}
 }
 
