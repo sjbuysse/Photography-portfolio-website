@@ -63,9 +63,9 @@ We're using the :before pseudo-element to create the "hamburger" menu icon. The 
 }
 
 header{ 
-	position: absolute;
-	top: 0;
-	left: 0;
+	position: fixed;
+	top: 0px;
+	left: 0px;
 	width: 100%;
 	background-color: rgba(0,0,0,0.7);
 	height: 60px;
