@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
     root 'pages#show', id: 'hero'
 
-    resources :gallery do 
+    resources :galleries do 
         resources :pictures
     end
 

@@ -24,7 +24,7 @@
 	<nav class="slide">
 		<ul>
             <li><%= link_to "About", page_path(id: "about")%></li>
-			<li><a href="#">Portfolio</a></li>
+            <li><%= link_to "Portfolio", galleries_path %></li>
             <li class="homebutton"><%= link_to image_tag("camera.svg"), page_path(id: "hero")%></a></li>
 			<li><a href="#">Camera</a></li>
 			<li><a href="#">Contact</a></li>
@@ -36,8 +36,6 @@
 	</div>
 	
 </div>
-
-
 
 </body>
 </html>

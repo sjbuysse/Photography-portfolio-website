@@ -1,0 +1,10 @@
+<div class="gallery-index">
+    <%= link_to "New gallery", new_gallery_path %>
+    <% @galleries.each do |gallery| %>
+        <div class="gallery-resume">
+            <h2> <%= link_to gallery.title, gallery_path(gallery) %> </h2>
+            <p> <%= gallery.synopsis %> </p>
+        </div>
+    <% end %>
+</div>
+

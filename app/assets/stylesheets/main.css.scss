@@ -1,4 +1,10 @@
-html, body, {
+@mixin inside-content{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 120px 100px 3rem;
+    max-width: 900px;
+}
+html, body, .container {
 	height: 100%;
 }
 
@@ -15,16 +21,15 @@ body, h1, h2, h3{
 	margin: 0;
 }
 
+.content {
+    min-height: 100%;
+}
 .content{
     margin: 0 auto; 
-    padding-bottom: 3rem;
     background-color: white;
 }
 .about{
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 60px 100px 0;
-    max-width: 900px;
+    @include inside-content;
     line-height: 1.25rem;
     img{
         width: 10rem;
@@ -36,4 +41,7 @@ body, h1, h2, h3{
         margin: 1.5rem auto 1rem;
         text-align: center;
     }
+}
+.gallery-index, .new-form, .gallery{
+    @include inside-content;
 }

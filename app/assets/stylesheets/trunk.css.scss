@@ -17,16 +17,13 @@ body {
 a {text-decoration: none;}
 
 .container {
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: #000;
 
 /*  Prevents Flickering  */
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
-}
-.content{
-    padding-top: 60px;
 }
 header {
 	height: 60px;
