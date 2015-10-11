@@ -1,0 +1,39 @@
+html, body, {
+	height: 100%;
+}
+
+body, h1, h2, h3{
+    font-family: Alice;
+}
+
+.hero-image {
+	height: 100vh;
+	background-image: url(varkentje.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 85% 66%;
+	margin: 0;
+}
+
+.content{
+    margin: 0 auto; 
+    padding-bottom: 3rem;
+    background-color: white;
+}
+.about{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 60px 100px 0;
+    max-width: 900px;
+    line-height: 1.25rem;
+    img{
+        width: 10rem;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    h3{
+        margin: 1.5rem auto 1rem;
+        text-align: center;
+    }
+}

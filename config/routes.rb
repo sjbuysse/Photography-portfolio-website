@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-    root 'gallery#index'
+    root 'pages#show', id: 'hero'
 
     resources :gallery do 
         resources :pictures
     end
 
-    get 'pages/:page' => 'pages#show'
+    resources :pages
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+  <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'></link>
 </head>
 <body>
 <div class="container">
@@ -23,9 +23,9 @@
 
 	<nav class="slide">
 		<ul>
-			<li><a href="#">About</a></li>
+            <li><%= link_to "About", page_path(id: "about")%></li>
 			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Home</a></li>
+            <li class="homebutton"><%= link_to image_tag("camera.svg"), page_path(id: "hero")%></a></li>
 			<li><a href="#">Camera</a></li>
 			<li><a href="#">Contact</a></li>
 		</ul>
