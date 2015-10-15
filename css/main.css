@@ -1,0 +1,317 @@
+/*  **********************
+GENERAL
+*********************** */
+* {
+  margin: 0;
+}
+
+html, body{
+	height: 100%;
+}
+
+
+h3 {
+	text-align: center;
+}
+
+img{
+	max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%; 
+}
+  
+a {
+  text-decoration: none; 
+}
+
+.content{
+	min-width: 320px;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 100px;
+}
+
+
+/*  **********************
+NAVIGATION
+*********************** */
+/*This is for the mobile navigation*/
+#drawer ul{ 
+	padding: 0;
+	margin: 1.5em 0 0;
+	width: 100%;	
+}
+
+#drawer li{ 
+	width: 100%;
+	height: 2.5em;
+	line-height: 2.5em;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+/*This is valid for both drawer and wide navigation*/
+nav li a { 
+	display: block;	
+}
+	
+/*This is for desktop/widescreen navigation*/
+@media screen and (min-width: 800px){
+	#drawer, #drawer-toggle, #drawer-toggle-label{ 
+		display:none;
+	}
+	#wide ul{
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 0;
+		list-style: none;
+	}
+	#wide{
+		height: 60px;
+		float: left;
+		width: 100%;
+	}
+	#wide li{
+		font-size: 0.9em;
+		float: left;
+		width: 20%;
+		margin: 0;
+		padding: 0;
+		height: 60px; 
+		line-height: 60px;
+		text-align: center;
+		position: relative;
+	}
+	#wide li a[href*="index.html"]{ 
+		width: 100%;
+		height: 100%;
+	}
+	#wide img{ 
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 3em;	
+	}
+}
+
+
+/*  **********************
+HOME PAGE
+*********************** */
+.hero-image {
+	height: 100vh;
+	background-image: url(../img/varkentje.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 85% 66%;
+	margin: 0;
+}
+
+
+/*  **********************
+FOOTER
+*********************** */
+
+footer{
+  font-size: 0.75em;
+  text-align: center;
+  padding-top: 50px;
+  color: #555;
+  height: 100px;
+  width: 100%;
+}
+/*Sticky footer */
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -100px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+  height: 100px;
+}
+
+
+/*  **********************
+ABOUT PAGE
+*********************** */
+
+#profile-picture{
+	display: block;
+	margin: 0 auto 20px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+
+/*  **********************
+PORTFOLIO PAGE
+*********************** */
+.portfolio div{
+	margin: 2.5%;
+}
+
+.project-title-wrapper{	
+	width: 45%;
+	float: left;
+}
+.project-wrapper{
+	width: 100%;
+}
+
+.project-title{
+	text-align: center;
+}
+
+.intrisic-ratio{
+	position: relative; /* Child elements will position themselves relative to this container*/
+	padding-bottom: 100%; /* The padding property is the magic that styles a box with an intrinsic ratio. 
+						 This is because we’ll set padding in a percentage, based on the width of the containing block (project-wrapper).*/
+	height: 0;
+}
+
+.project-image{
+	position: absolute; /* This frees the element from the height boundary of its parent. This way, it can be positioned over the “padding area.” */
+	top: 0;
+	left: 0;
+	width: 100%; /* fill container */
+	height: 100%; 
+	background-size: cover;
+	border: 1px solid #BBB;
+	background-repeat: no-repeat;
+	background-position: 50% 50%
+}
+
+/* 
+.project-image img{
+	border: 1px solid #BBB;
+} */
+
+.portfolio a{
+	display:block;
+	height: 100%;
+	width: 100%;
+}
+
+
+/*  **********************
+CONTACT PAGE
+*********************** */
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.contact label{
+	display: block;
+	margin: 3px 0;
+}
+
+.tip {
+	float: right;	
+	margin: 3px 0;
+}
+
+.contact button{
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer; 
+	font-size: 0.875em;
+	font-weight: 400;
+	padding: 15px;
+	border: 0;
+	border-radius: 8px;
+}
+
+.contact input, textarea{
+	display: block;
+	width: 100%;
+	margin-bottom: 10px; 	
+	font-size: 1em;
+	border: none;
+	height: auto;
+	padding: 15px;
+	outline: 0;
+	margin-bottom: 1.2em;
+	border-radius: .3em;
+  /* border-bottom: 3px solid rgba(0,0,0, 0.1); */
+  /* box-shadow: 0 1px 0 rgba(0,0,0,0.02) inset; */
+	Box-shadow: inset 0 2px 0 rgba(0,0,0,0.15);
+
+}
+
+/*  **********************
+FONTS
+*********************** */
+
+body {
+	font-family: 'Alice', serif;
+}
+
+ nav {
+	font-size: 1.2em;
+}
+
+.tip{
+	font-size: 0.8em;
+}
+
+
+
+/*  **********************
+COLORS
+*********************** */
+
+body {
+	color: rgb(13, 9, 6);
+}
+
+input, textarea{
+	background-color: #eaf5ef;
+}
+
+.contact button{
+	background-color: #30A463;
+	color: white;
+}
+
+.tip{
+	color: #E45A4F;
+}
+
+nav{
+	background-color: rgba(0,0,0, 0.7);
+}
+
+nav li a{
+	color: #fff;
+}
+
+nav li a:hover{
+	background-color: #D78555;
+	transition: 0.5s;
+}
+
+/*  **********************
+CLEARFIX
+*********************** */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}

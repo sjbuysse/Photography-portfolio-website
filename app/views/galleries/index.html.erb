@@ -4,6 +4,7 @@
         <div class="gallery-resume">
             <h2> <%= link_to gallery.title, gallery_path(gallery) %> </h2>
             <p> <%= gallery.synopsis %> </p>
+            <%= button_to "Delete gallery", gallery_path(gallery) , method: :delete, data: {confirm: "Are you sure?"} %>
         </div>
     <% end %>
 </div>

@@ -1,5 +1,12 @@
 <div class="gallery">
     <h1> <%= @gallery.title %> </h2>
+    <%= link_to "Edit gallery", edit_gallery_path()%>
     <p> <%= @gallery.synopsis %> </p>
+    <ul>
+    <% @gallery.pictures.each do |picture| %>
+        <li>
+        <%= image_tag(picture.image) %>
+        </li>
+    <% end %>
+    </ul>
 </div>
-
