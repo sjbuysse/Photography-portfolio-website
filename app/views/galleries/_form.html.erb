@@ -15,6 +15,14 @@
         </ul>
     <% end %>
     <%= file_field_tag "images[]", type: :file, multiple: true %><br />
+    <%= f.label :thumb %><br />
+    <% if @gallery.thumb %>
+        <div>
+        <%= image_tag(@gallery.thumb, class: "thumb") %> 
+        </div>
+    <% end %>
+    <%= f.file_field :thumb %><br />
+    <%= f.hidden_field :thumb_cache %>
     <%= f.submit %>
 <% end %>
 

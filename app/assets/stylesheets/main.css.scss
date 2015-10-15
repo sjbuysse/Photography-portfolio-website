@@ -45,6 +45,15 @@ body, h1, h2, h3{
     @include inside-content;
 }
 
+.gallery-index{
+    div.thumb-wrapper{
+        float: left;
+        width: 200px;
+        height: 150px;
+        background-size: cover;
+    }
+}
+
 .form {
     li{
         float: left;
@@ -55,6 +64,9 @@ body, h1, h2, h3{
         img{
             width: 100%;
         }
+    }
+    img.thumb{
+        width: 200px;
     }
 }
 

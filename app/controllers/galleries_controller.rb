@@ -52,6 +52,6 @@ class GalleriesController < ApplicationController
         @gallery = Gallery.find(params[:id])
     end
     def gallery_params
-        params.require(:gallery).permit(:title, :synopsis)
+        params.require(:gallery).permit(:title, :synopsis, :thumb)
     end
 end

@@ -3,13 +3,17 @@
         <%= link_to "New gallery", new_gallery_path %>
     <% end %>
     <% @galleries.each do |gallery| %>
-        <div class="gallery-resume">
-            <h2> <%= link_to gallery.title, gallery_path(gallery) %> </h2>
-            <p> <%= gallery.synopsis %> </p>
-            <% if user_signed_in? %>
-                <%= button_to "Delete gallery", gallery_path(gallery) , method: :delete, data: {confirm: "Are you sure?"} %>
-            <% end %>
-        </div>
+        <%= link_to gallery_path(gallery) do %> 
+            <div class="gallery-resume">
+                <div class="thumb-wrapper" style="background-image: url(<%=gallery.thumb %>)">
+                </div>
+                <h2> <%= gallery.title %> </h2>
+                <p> <%= gallery.synopsis %> </p>
+                <% if user_signed_in? %>
+                    <%= button_to "Delete gallery", gallery_path(gallery) , method: :delete, data: {confirm: "Are you sure?"} %>
+                <% end %>
+            </div>
+        <% end %>
     <% end %>
 </div>
 
