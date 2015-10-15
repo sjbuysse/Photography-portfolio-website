@@ -29,7 +29,6 @@ body, h1, h2, h3{
     background-color: white;
 }
 .about{
-    @include inside-content;
     line-height: 1.25rem;
     img{
         width: 10rem;
@@ -42,7 +41,7 @@ body, h1, h2, h3{
         text-align: center;
     }
 }
-.gallery-index, .form, .gallery{
+.gallery-index, .form, .gallery, .about, .devise-wrapper{
     @include inside-content;
 }
 
