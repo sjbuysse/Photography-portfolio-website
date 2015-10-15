@@ -59,19 +59,27 @@ body, h1, h2, h3{
     }
 }
 
+$tile-width: 32%;
+$tile-margin: (100% - (3 * $tile-width))/2;
 .gallery{
-    li{
+    .grid[data-columns]::before{
+        content: '3 .column.size-1of3'
+    }
+    .column{
         float: left;
-        width: 45%;
-        margin-bottom: 1.5rem;
+        & + .column {
+            margin-left: $tile-margin;
+        }
+    }
+    .size-1of3{
+        width: $tile-width;  
         img{
             width: 100%;
-        }
-        &:nth-child(2n){
-        margin-left: 5%;
+            margin-bottom: 1rem;
         }
     }
 }
+
 
 /*********************
  * CLEARFIX 

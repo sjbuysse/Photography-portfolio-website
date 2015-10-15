@@ -2,11 +2,12 @@
     <h1> <%= @gallery.title %> </h2>
     <%= link_to "Edit gallery", edit_gallery_path()%>
     <p> <%= @gallery.synopsis %> </p>
-    <ul>
+    <div class="grid" data-columns>
     <% @gallery.pictures.each do |picture| %>
-        <li>
+        <div>
         <%= image_tag(picture.image) %>
-        </li>
+        </div>
     <% end %>
-    </ul>
+    </div>
 </div>
+<%= javascript_include_tag 'exclusive/salvattore.min' %>

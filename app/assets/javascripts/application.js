@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require trunk
-//= require_tree .
+//= require_directory .
