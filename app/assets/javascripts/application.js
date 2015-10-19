@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require trunk
+//= require jquery.swipebox.min
 //= require_directory .

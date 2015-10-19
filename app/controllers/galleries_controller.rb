@@ -6,22 +6,12 @@ class GalleriesController < ApplicationController
     end
     def new
         @gallery = Gallery.new
+        @gallery.pictures.build
     end
     def create
-        @gallery = Gallery.new(gallery_params)
-        if @gallery.save
-            if params[:images]
-                params[:images].each do |image|
-                    @gallery.pictures.create(image: image)
-                end
-            end
-            flash[:success] = "Successfully created gallery"
-            redirect_to(gallery_path(@gallery))
-        else
-            flash[:error] = "Could not save gallery"
-            render action: :new
-            flash.discard(:error)
-        end
+        @gallery = Gallery.new gallery_params
+        @gallery.save
+        redirect_to(gallery_path(@gallery))
     end
     def show
     end
@@ -52,6 +42,6 @@ class GalleriesController < ApplicationController
         @gallery = Gallery.find(params[:id])
     end
     def gallery_params
-        params.require(:gallery).permit(:title, :synopsis, :thumb)
+        params.require(:gallery).permit(:title, :synopsis, :thumb, pictures_attributes: [:image, :title])
     end
 end

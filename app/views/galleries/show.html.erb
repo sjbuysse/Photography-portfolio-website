@@ -3,13 +3,22 @@
     <% if user_signed_in? %>
         <%= link_to "Edit gallery", edit_gallery_path()%>
     <% end %>
-    <p> <%= @gallery.synopsis %> </p>
     <div class="grid" data-columns>
     <% @gallery.pictures.each do |picture| %>
         <div>
-        <%= image_tag(picture.image) %>
+            <a href="<%=picture.image%>" class="swipebox" >
+            <%= image_tag(picture.image) %>
+            </a>
         </div>
     <% end %>
     </div>
 </div>
 <%= javascript_include_tag 'exclusive/salvattore.min' %>
+<script type="text/javascript">
+;( function( $  ) {
+
+            $( '.swipebox'  ).swipebox();
+
+
+            }  )( jQuery  );
+</script>
