@@ -16,21 +16,11 @@ class GalleriesController < ApplicationController
     def show
     end
     def edit
+        @gallery.pictures.build
     end
     def update
-        if @gallery.update(gallery_params)
-            if params[:images]
-                params[:images].each do |image|
-                    @gallery.pictures.create(image: image)
-                end
-            end
-            flash[:success] = "Successfully updated gallery"
-            redirect_to(gallery_path(@gallery))
-            else
-            flash[:error] = "Could not save gallery"
-            render action: :edit
-            flash.discard(:error)
-        end
+        @gallery.update(gallery_params)
+        redirect_to(gallery_path(@gallery))
     end
     def destroy
         @gallery.destroy
@@ -42,6 +32,6 @@ class GalleriesController < ApplicationController
         @gallery = Gallery.find(params[:id])
     end
     def gallery_params
-        params.require(:gallery).permit(:title, :synopsis, :thumb, pictures_attributes: [:image, :title])
+        params.require(:gallery).permit(:title, :synopsis, :thumb, pictures_attributes: [:image, :title, :id, :_destroy])
     end
 end

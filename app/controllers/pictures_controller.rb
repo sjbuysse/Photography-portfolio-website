@@ -1,10 +1,12 @@
 class PicturesController < ApplicationController
     def create
-       puts picture_params
        @picture = Picture.new(picture_params)  
        @picture.save
     end
-    
+    def update
+       @picture = Picture.find(params[:id])  
+       @picture.update(picture_params)
+    end
     def destroy
         @picture = Picture.find(params[:id])  
         @picture.destroy
@@ -13,6 +15,6 @@ class PicturesController < ApplicationController
 
     private
     def picture_params
-        params.require(:picture).permit(:image)
+        params.require(:picture).permit(:image, :title)
     end
 end

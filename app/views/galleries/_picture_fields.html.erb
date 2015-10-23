@@ -1,0 +1,12 @@
+<li class="clearfix duplicatable-nested-form">
+    <% if p.object.image.length > 1 %>
+        <%= image_tag(p.object.image)  %>
+    <% end %>
+    <%= p.file_field :image %>
+    <%= p.text_field :title %>
+    <% if p.object.image.length > 1 %>
+        <br />
+        <%= p.hidden_field :_destroy %>
+        <a href="#" class="delete-link">Remove picture</a>
+    <% end %>
+</li>

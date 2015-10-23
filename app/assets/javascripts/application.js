@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
 //= require trunk
 //= require jquery.swipebox.min
+//= require remove_fields
 //= require_directory .

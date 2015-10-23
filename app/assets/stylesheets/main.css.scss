@@ -79,13 +79,11 @@ body, h1, h2, h3{
 
 .form {
     li{
-        float: left;
-        width: 200px;
-        & + li {
-            margin-left: 20px;
-        }
+        width: 100%;
+        margin-bottom: 1rem;
         img{
-            width: 100%;
+            float: left;
+            width: 200px;
         }
     }
     img.thumb{
