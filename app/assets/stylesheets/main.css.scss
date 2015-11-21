@@ -10,12 +10,27 @@ $gallery-resume-height: 150px;
     max-width: 900px;
 }
 
-html, body, .container {
-	height: 100%;
+.content p,  .content, .content a:not(.button), .content a:visited {
+    color: $text-color;
 }
 
-.content p, .content a, .content a:hover, .content a:visited{
+.button{
+    display:inline-block;
+    font-size: 0.8rem;
     color: $text-color;
+    background: transparent;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid grey;
+    border-radius: 1.5rem;
+    &:hover{
+       cursor: pointer;
+       border: 1px solid black; 
+       color: black;
+    }
+}
+
+html, body, .container {
+	height: 100%;
 }
 
 body, h1, h2, h3{
@@ -78,16 +93,30 @@ body, h1, h2, h3{
 }
 
 .form {
+    label{
+        display: inline-block;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        margin: 0.4rem 0;
+    }
     li{
         width: 100%;
-        margin-bottom: 1rem;
-        img{
-            float: left;
-            width: 200px;
-        }
+        margin-bottom: 2rem;
+    }
+    img{
+        width: 200px;
+    }
+    img, input[type="file"]{
+        display: block;
+    }
+    input[type="file"]{
+        margin: 0.3rem 0;
     }
     img.thumb{
         width: 200px;
+    }
+    .duplicate-nested-form{
+        margin-bottom: 1.5rem;
     }
 }
 

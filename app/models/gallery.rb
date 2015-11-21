@@ -1,6 +1,6 @@
 class Gallery < ActiveRecord::Base
     has_many :pictures, dependent: :destroy
-    accepts_nested_attributes_for :pictures, allow_destroy: true;
+    accepts_nested_attributes_for :pictures, reject_if: proc { |attributes| attributes[:image].blank? }, allow_destroy: true;
 
     mount_uploader :thumb, ThumbUploader
 

@@ -16,5 +16,5 @@
 //= require turbolinks
 //= require trunk
 //= require jquery.swipebox.min
-//= require remove_fields
+//= require nested_fields
 //= require_directory .

@@ -19,8 +19,13 @@ class GalleriesController < ApplicationController
         @gallery.pictures.build
     end
     def update
-        @gallery.update(gallery_params)
-        redirect_to(gallery_path(@gallery))
+        if @gallery.update(gallery_params)
+            redirect_to(gallery_path(@gallery))
+        else
+            flash[:notice] = "Couldn't save the gallery"
+            redirect_to(gallery_path(@gallery))
+            #render :edit
+        end
     end
     def destroy
         @gallery.destroy

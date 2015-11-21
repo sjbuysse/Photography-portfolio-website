@@ -4,9 +4,10 @@
     <% end %>
     <%= p.file_field :image %>
     <%= p.text_field :title %>
-    <% if p.object.image.length > 1 %>
-        <br />
-        <%= p.hidden_field :_destroy %>
-        <a href="#" class="delete-link">Remove picture</a>
+    <% if p.object.new_record? %>
+        <%= link_to "Remove picture", "", remote: true, class: "remove-duplicate-nested-form button" %>
+    <% else %>
+        <%= link_to "Remove picture", gallery_picture_path(@gallery, p.object), method: :delete, remote: true, class: "remove-duplicate-nested-form button" %>
+    <%= p.hidden_field :id %>
     <% end %>
 </li>

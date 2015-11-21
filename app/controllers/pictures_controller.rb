@@ -10,7 +10,10 @@ class PicturesController < ApplicationController
     def destroy
         @picture = Picture.find(params[:id])  
         @picture.destroy
-        redirect_to edit_gallery_path(params[:gallery_id])
+        respond_to do |format|
+            format.html {redirect_to edit_gallery_path(params[:gallery_id])}
+            format.js {render nothing: true}
+        end
     end
 
     private
