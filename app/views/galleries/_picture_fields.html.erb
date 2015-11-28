@@ -5,9 +5,9 @@
     <%= p.file_field :image %>
     <%= p.text_field :title %>
     <% if p.object.new_record? %>
-        <%= link_to "Remove picture", "", remote: true, class: "remove-duplicate-nested-form button" %>
+        <%= link_to "Remove picture", "", remote: true, class: "remove-duplicate-nested-form button red-hover" %>
     <% else %>
-        <%= link_to "Remove picture", gallery_picture_path(@gallery, p.object), method: :delete, remote: true, class: "remove-duplicate-nested-form button" %>
+        <%= link_to "Remove picture", gallery_picture_path(@gallery, p.object), method: :delete, remote: true, class: "remove-duplicate-nested-form button red-hover" %>
     <%= p.hidden_field :id %>
     <% end %>
 </li>

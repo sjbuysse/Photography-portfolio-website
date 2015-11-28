@@ -1,19 +1,21 @@
 <div class="gallery-index">
     <% if user_signed_in? %>
-        <%= link_to "New gallery", new_gallery_path %>
+        <%= link_to "New gallery", new_gallery_path, class: "button black-hover" %>
     <% end %>
     <% @galleries.each do |gallery| %>
-        <%= link_to gallery_path(gallery) do %> 
-            <div class="gallery-resume clearfix">
+        <div class="gallery-resume clearfix">
+            <%= link_to gallery_path(gallery) do %> 
                 <div class="thumb-wrapper" style="background-image: url(<%=gallery.thumb %>)">
                 </div>
+            <% end %>
+            <%= link_to gallery_path(gallery) do %> 
                 <h2> <%= gallery.title %> </h2>
-                <p> <%= gallery.synopsis %> </p>
-                <% if user_signed_in? %>
-                    <%= button_to "Delete gallery", gallery_path(gallery) , method: :delete, data: {confirm: "Are you sure?"} %>
-                <% end %>
-            </div>
-        <% end %>
+            <% end %>
+            <p> <%= gallery.synopsis %> </p>
+            <% if user_signed_in? %>
+                <%= button_to "Delete gallery", gallery_path(gallery) , method: :delete, data: {confirm: "Are you sure?"}, class: "button delete-gallery red-hover"%>
+            <% end %>
+        </div>
     <% end %>
 </div>
 

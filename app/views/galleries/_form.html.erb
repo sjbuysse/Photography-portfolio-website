@@ -14,7 +14,7 @@
                 <%= render "picture_fields", p: builder %>
             <% end %>
         </ul>
-        <%= link_to "Add another picture", "", class: "duplicate-nested-form button clearfix"%>
+        <%= link_to "Add another picture", "", class: "duplicate-nested-form button clearfix black-hover"%>
         <br />
     <%= f.label :thumb %><br />
     <% if @gallery.thumb.length > 1 %>
@@ -24,6 +24,6 @@
     <% end %>
     <%= f.file_field :thumb %><br />
     <%= f.hidden_field :thumb_cache %>
-    <%= f.submit "Submit gallery", class: "button"%>
+    <%= f.submit "Submit gallery", class: "button black-hover"%>
 <% end %>
 

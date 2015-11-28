@@ -3,6 +3,9 @@ $back-color: #E7E7E7;
 $darker-title: #464646;
 $gallery-resume-height: 150px;
 
+h1, h2, h3 {
+    color:$darker-title;
+}
 @mixin inside-content{
     box-sizing: border-box;
     margin: 0 auto;
@@ -10,7 +13,7 @@ $gallery-resume-height: 150px;
     max-width: 900px;
 }
 
-.content p,  .content, .content a:not(.button), .content a:visited {
+.content p,  .content {
     color: $text-color;
 }
 
@@ -22,11 +25,18 @@ $gallery-resume-height: 150px;
     padding: 0.5rem 0.7rem;
     border: 1px solid grey;
     border-radius: 1.5rem;
-    &:hover{
-       cursor: pointer;
-       border: 1px solid black; 
-       color: black;
-    }
+}
+
+.black-hover:hover{
+   cursor: pointer;
+   border: 1px solid black; 
+   color: black;
+}
+
+.red-hover:hover{
+   cursor: pointer;
+   border: 1px solid tomato; 
+   color: tomato;
 }
 
 html, body, .container {
@@ -84,10 +94,16 @@ body, h1, h2, h3{
         height: $gallery-resume-height;
         box-shadow: 5px 7px 20px -8px rgba(0,0,0, .8);
         margin-bottom: 2rem;
+        position: relative;
         h2{
             margin: 0.5rem 0;
             text-transform: uppercase;
             color: $darker-title;
+        }
+        .delete-gallery{
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.5rem;
         }
     }
 }
@@ -98,6 +114,7 @@ body, h1, h2, h3{
         font-size: 1.1rem;
         text-transform: uppercase;
         margin: 0.4rem 0;
+        color: $darker-title;
     }
     li{
         width: 100%;
@@ -144,6 +161,10 @@ $tile-margin: (100% - (3 * $tile-width))/2;
             width: 100%;
             margin-bottom: 1rem;
         }
+    }
+    .button{
+        position: absolute;
+        top: 80px;
     }
 }
 

@@ -1,7 +1,7 @@
-<div class="gallery">
+<div class="gallery clearfix">
     <h1> <%= @gallery.title %> </h2>
     <% if user_signed_in? %>
-        <%= link_to "Edit gallery", edit_gallery_path()%>
+        <%= link_to "Edit gallery", edit_gallery_path(), class: "button black-hover"%>
     <% end %>
     <div class="grid" data-columns>
     <% @gallery.pictures.each do |picture| %>
