@@ -26,8 +26,8 @@
             <li><%= link_to "About", page_path(id: "about")%></li>
             <li><%= link_to "Portfolio", galleries_path %></li>
             <li class="homebutton"><%= link_to image_tag("camera.svg"), page_path(id: "hero")%></a></li>
-			<li><a href="#">Camera</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><%= link_to "Camera", page_path(id: "camera")%></li>
+			<li><%= link_to "Contact", contacts_path%></li>
 		</ul>
 	</nav>
 	
