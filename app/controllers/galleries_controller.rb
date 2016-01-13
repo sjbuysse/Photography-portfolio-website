@@ -2,7 +2,7 @@ class GalleriesController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
     before_action :find_gallery, only: [:show, :edit, :update, :destroy]
     def index
-        @galleries = Gallery.all
+        @galleries = Gallery.descending
     end
     def new
         @gallery = Gallery.new

@@ -67,10 +67,12 @@ nav {
 }
 nav li {
     text-align: center;
-    width: 19%;
+    width: 20%;
     height: 60px;
     line-height:60px;
-    display: inline-block;
+    /*display: inline-block;*/
+    float: left;
+    box-sizing: border-box;
 }
 nav li a {
 	font-size: 18px;

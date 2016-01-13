@@ -3,20 +3,6 @@
         <%= link_to "New gallery", new_gallery_path, class: "button black-hover" %>
     <% end %>
     <h1>Galleries</h1>
-    <% @galleries.each do |gallery| %>
-        <div class="gallery-resume clearfix">
-            <%= link_to gallery_path(gallery) do %> 
-                <div class="thumb-wrapper" style="background-image: url(<%=gallery.thumb %>)">
-                </div>
-            <% end %>
-            <%= link_to gallery_path(gallery) do %> 
-                <h2> <%= gallery.title %> </h2>
-            <% end %>
-            <p> <%= gallery.synopsis %> </p>
-            <% if user_signed_in? %>
-                <%= button_to "Delete gallery", gallery_path(gallery) , method: :delete, data: {confirm: "Are you sure?"}, class: "button delete-gallery red-hover"%>
-            <% end %>
-        </div>
-    <% end %>
+    <%= render @galleries %>
 </div>
 

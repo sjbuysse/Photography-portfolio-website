@@ -6,8 +6,8 @@
     <div class="grid" data-columns>
     <% @gallery.pictures.each do |picture| %>
         <div>
-            <a href="<%=picture.image%>" class="swipebox" >
-            <%= image_tag(picture.image) %>
+            <a href="<%=picture.image%>" class="swipebox" title="<%= picture.title %>">
+            <%= cl_image_tag(picture.image) %>
             </a>
         </div>
     <% end %>

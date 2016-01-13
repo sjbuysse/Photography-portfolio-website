@@ -5,9 +5,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
+  include Cloudinary::CarrierWave
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  #storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -41,6 +42,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def extension_white_list
   #   %w(jpg jpeg gif png)
   # end
+  version :standard do
+     process :resize_to_limit => [2048, 2048]
+   end
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.

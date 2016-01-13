@@ -7,6 +7,17 @@ h1, h2, h3 {
     color:$darker-title;
 }
 
+h1{
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 2rem;
+        @media only screen and (max-width: 550px) {
+            font-size: 1.7rem;
+        }
+        @media only screen and (max-width: 400px) {
+            font-size: 1.4rem;
+        }
+    }
 @mixin inside-content{
     box-sizing: border-box;
     margin: 0 auto;
@@ -81,7 +92,17 @@ body, h1, h2, h3{
         text-align: center;
     }
 }
-.gallery-index, .form, .gallery, .about, .devise-wrapper, .contact{
+.camera {
+    .body-explanation{
+        float: left;
+        margin: 1rem 1rem 1rem 0;
+        width: 10rem;
+    }
+    p {
+        margin: 1rem 0;
+    }
+}
+.gallery-index, .form, .gallery, .about, .camera, .devise-wrapper, .contact{
     @include inside-content;
     @media only screen and (min-width: 550px) {
         padding: 100px 70px 3rem;
@@ -91,11 +112,11 @@ body, h1, h2, h3{
     }
 }
 .gallery-index{
-    h1{
-        text-align: center;
-        text-transform: uppercase;
-        margin: 0 auto 2rem;
-    }
+    /*h1{*/
+        /*text-align: center;*/
+        /*text-transform: uppercase;*/
+        /*margin: 0 auto 2rem;*/
+    /*}*/
     div.thumb-wrapper{
         float: left;
         width: 200px;
@@ -169,20 +190,36 @@ body, h1, h2, h3{
     }
 }
 
+.contact-form{
+    max-width: 20rem;
+    margin: 0 auto;
+    .new_contact{
+        input, textarea{
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0.4rem 0 0.8rem; 
+            &[type="text"], &[as="text"]{
+                padding: 10px;
+                border-radius: .3rem;
+                border: none;
+                outline: 0; 
+                margin-bottom: 1.2em; 
+                border-radius: .3em; 
+                border-bottom: 3px solid rgba(0,0,0, 0.05); 
+                box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset; 
+            }
+        }  
+        textarea{
+            line-height: 1.25rem;
+            height: 6rem;
+        }
+    }
+}
+    
 $tile-width: 49%;
 $tile-margin: (100% - (2 * $tile-width));
 .gallery{
-    h1{
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 2rem;
-        @media only screen and (max-width: 550px) {
-            font-size: 1.7rem;
-        }
-        @media only screen and (max-width: 400px) {
-            font-size: 1.4rem;
-        }
-    }
+    
 
     .grid[data-columns]::before{
         content: '2 .column.size-1of2'

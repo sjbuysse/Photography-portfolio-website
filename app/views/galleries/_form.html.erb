@@ -19,7 +19,7 @@
     <%= f.label :thumb %><br />
     <% if @gallery.thumb.length > 1 %>
         <div>
-        <%= image_tag(@gallery.thumb, class: "thumb") %> 
+        <%= image_tag(@gallery.thumb_url, class: "thumb") %> 
         </div>
     <% end %>
     <%= f.file_field :thumb %><br />
