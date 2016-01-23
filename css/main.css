@@ -108,7 +108,7 @@ HOME PAGE
 *********************** */
 .hero-image {
 	height: 100vh;
-	background-image: url(../img/varkentje.jpg);
+	background-image: url(varkentje.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 85% 66%;
